@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd ../client && npm start",
+    "server": "nodemon index.js",
+    "dev" : "concurrently \"npm run client\" \"npm run server\" ",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install cd ../client && npm install && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.5",
+    "nodemailer": "^6.7.2"
+  }
+}
